@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <h2>First nuxt project, products main page</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut sequi enim veniam illum cumque voluptate eveniet iste dignissimos, eaque, facere minima, possimus tenetur commodi delectus debitis laboriosam et suscipit.</p>
+    <div class="grid grid-cols-4 gap-5">
+        <div v-for="product in products" :key="product.id">
+            <NuxtLink :to='`/products/${product.id}`'> {{product.title}} </NuxtLink>
+        </div>
+      
     </div>
 </template>
 
@@ -9,6 +11,7 @@
 definePageMeta({
     layout: 'products'
 })
+ const {data:products} = await useFetch('https://fakestoreapi.com/products')
 </script>
 
 <style scoped>
