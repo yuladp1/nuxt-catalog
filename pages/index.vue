@@ -1,14 +1,28 @@
 <template>
-        <div>
-        <h2>First nuxt project, main page</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut sequi enim veniam illum cumque voluptate eveniet iste dignissimos, eaque, facere minima, possimus tenetur commodi delectus debitis laboriosam et suscipit.</p>
-    </div>
+       <div>
+        <div v-for="category in categories" :key="category">
+        <NuxtLink :to="`/categories/${category}`">   <span>{{ category }}</span></NuxtLink> 
+        </div>
+        </div> 
+
+    <div class="grid grid-cols-4 gap-5">
+        <div v-for="product in products" :key="product.id">
+           <productCard  :product="product"  />
+        </div>
+          </div>
 </template>
 
 <script setup>
-
+definePageMeta({
+    layout: 'default'
+})
+ const {data:products} = await useFetch('https://fakestoreapi.com/products')
+ const {data: categories} = await useFetch('https://fakestoreapi.com/products/categories')
 </script>
 
-<style scoped>
-
-</style>
+<style >
+.router-link-active {
+    color: blue;
+    text-decoration: underline;
+}
+</style> 
