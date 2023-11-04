@@ -2,8 +2,8 @@
     <div>
         <input type="search" id="search" placeholder="Search for products" @input="fetchSearchResults"
             class="block w-full px-3 py-1 bg-white bg-clip-padding border border-solid border-gray-300 rounded">
-        <div v-if="hits.length" class="flex justify-center absolute top-10 z-10">
-        <ul class="bg-white border border-gray-200 w-96 text-gray-900">
+        <div v-if="hits.length" ref="target" class="flex justify-center absolute top-12 z-10">
+        <ul v-if="closeSearchResults" class="bg-white border border-gray-200 w-96 text-gray-900">
             <li v-for="hit in hits" :key="hit.objectID" class="px-6 py-2 border-b border-gray-200 w-full" @click="hits = []">
                 <NuxtLink :to="`/products/${hit.id}`">
                      {{ hit.title }}
@@ -16,6 +16,12 @@
 </template>
 
 <script setup>
+import { onClickOutside } from '@vueuse/core'
+const target = ref(null)
+let closeSearchResults = ref(true)
+onClickOutside(target, () => {
+  closeSearchResults.value = false
+})
 import algoliasearch from 'algoliasearch'
 const client = algoliasearch('IUVNKR0IHG', 'ac7f57b7024e53f2ccc00d36463382ef')
 const index = client.initIndex('test_AlgoliaProducts')
@@ -32,10 +38,10 @@ index.setSettings({
 
 let hits = ref([]);
 const fetchSearchResults = async (e) => {
-    const { result, search } = useAlgoliaSearch('test_AlgoliaProducts') // hits = []
+    closeSearchResults.value = true
+    const { result, search } = useAlgoliaSearch('test_AlgoliaProducts') 
     await search({ query: e.target.value })
     hits.value = result.value.hits
-    console.log('this.hits.value')
 }
 
 // Adding database to Algolia:

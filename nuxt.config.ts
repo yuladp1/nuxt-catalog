@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
   modules: ['@nuxtjs/tailwindcss',
-    '@nuxtjs/algolia'],
+    '@nuxtjs/algolia',
+    '@vueuse/nuxt'],
     algolia: {
       apiKey: 'a72f660af9a73e035508ba332d4d8dff',
       applicationId: 'IUVNKR0IHG',
