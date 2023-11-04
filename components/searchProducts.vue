@@ -23,7 +23,7 @@ onClickOutside(target, () => {
   closeSearchResults.value = false
 })
 import algoliasearch from 'algoliasearch'
-const client = algoliasearch('ALGOLIA_APPLICATION_ID', 'ALGOLIA_API_KEY')
+const client = algoliasearch('IUVNKR0IHG', 'ac7f57b7024e53f2ccc00d36463382ef')
 const index = client.initIndex('test_AlgoliaProducts')
 index.setSettings({
     // Select the attributes you want to search in
