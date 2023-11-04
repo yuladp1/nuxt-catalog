@@ -6,7 +6,7 @@
                 <SearchProducts></SearchProducts>
                 <ul class="flex gap-4">
                     <li><NuxtLink to="/" class="btn" >Main page</NuxtLink></li>
-                    <li><NuxtLink to="/about">About</NuxtLink></li> 
+                    <li><NuxtLink to="/contacts">Contacts</NuxtLink></li> 
                          </ul>
             </nav>
         </header>
