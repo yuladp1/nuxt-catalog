@@ -23,6 +23,7 @@ definePageMeta({
 const { data: products } = await useFetch('https://fakestoreapi.com/products')
 const { data: categories } = await useFetch('https://fakestoreapi.com/products/categories')
 
+
 </script>
 
 <style >
