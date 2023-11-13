@@ -1,7 +1,7 @@
 <template>
     <div>
         <CookiesTab/>
-        <header class="shadow-sm bg-white">
+        <!-- <header class="shadow-sm bg-white">
             <nav class="container mx-auto p-4 flex justify-between">
                 <NuxtLink to="/" class="font-bold">TEST STORE</NuxtLink>
                 <SearchProducts></SearchProducts>
@@ -10,18 +10,10 @@
                     <li><NuxtLink to="/contacts">Contacts</NuxtLink></li> 
                          </ul>
             </nav>
-        </header>
+        </header> -->
         <div class="container mx-auto p-4">
             <slot/>
         </div>
 
 </div>
 </template>
-
-<script setup>
-
-</script>
-
-<style scoped>
-
-</style>

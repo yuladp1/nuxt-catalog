@@ -60,7 +60,9 @@
 </template>
 
 <script setup>
-
+definePageMeta({
+    layout: 'contacts'
+})
 </script>
 
 <style scoped></style>

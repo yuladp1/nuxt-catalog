@@ -21,6 +21,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.0.18",
+    "@nuxt/ui": "^2.10.0",
     "@nuxtjs/algolia": "^1.10.1"
   }
 }
