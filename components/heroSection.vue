@@ -5,8 +5,8 @@
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            <span class="sr-only">Next-test catalog</span>
+                 <CubeTransparentIcon class="h-6 w-6" aria-hidden="true"/>
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -66,9 +66,8 @@
       </div>
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Data to enrich your online business</h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is the <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"> Nuxt3</span> test</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">This is test <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"> Nuxt</span>, Tailwind, Heroicon, REST API, NuxtUI, Nuxt modules (cookie-control), Algolia. Also I used web3forms.com for contact form. </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="#"
               class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
@@ -90,17 +89,15 @@
 </template>
   
 <script setup>
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
+import { Bars3Icon, XMarkIcon, CubeTransparentIcon} from '@heroicons/vue/24/solid'
 const navigation = ref([
-  { name: 'Products', href: '/' },
-  { name: 'Categories', href: '#' },
+  { name: 'Products', href: '/products' },
+  { name: 'Categories', href: '/categories' },
   { name: 'Contacts', href: '/contacts' },
 ])
 
 const mobileMenuOpen = ref(false)
 </script>
 
-<style scoped>.main-section {
-  background: url('../assets/img/BgIMage.png'), lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
-  mix-blend-mode: color-burn;
-}</style>
+<style scoped>
+</style>
