@@ -7,7 +7,7 @@
                 <div class="max-w-md mx-auto my-3 bg-white p-5 rounded-md shadow-sm">
                     <div class="text-center">
                         <h1 class="my-3 text-3xl font-semibold text-gray-700">
-                            Please, feel free to contact with me:
+                            Please, feel free to contact:
                         </h1>
                         <p class="text-gray-400 dark:text-gray-400">
                             Fill up the form below:
@@ -61,7 +61,7 @@
 
 <script setup>
 definePageMeta({
-    layout: 'contacts'
+    layout: 'default'
 })
 </script>
 
