@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
-  modules: [
+   modules: [
     '@nuxtjs/algolia',
     '@vueuse/nuxt',
     '@dargmuesli/nuxt-cookie-control', 
