@@ -64,7 +64,7 @@
     </div>
 </template>
 <script setup>
-import { Bars3Icon, XMarkIcon, CubeTransparentIcon } from '@heroicons/vue/24/solid'
+// import { Bars3Icon, XMarkIcon, CubeTransparentIcon } from '@heroicons/vue/24/solid'
 const navigation = ref([
     { name: 'Products', href: '/products' },
     { name: 'Categories', href: '/categories' },
@@ -73,3 +73,11 @@ const navigation = ref([
 
 const mobileMenuOpen = ref(false)
 </script>
+<style>
+.router-link-active {
+    color: rgb(0, 26, 255);
+}
+.router-link-exact-active {
+    color: rgb(0, 26, 255);
+}
+</style>

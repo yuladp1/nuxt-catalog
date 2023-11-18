@@ -1,6 +1,7 @@
 <template>
+    <BreadCrumbs/>
     <p>Products from category "{{ category }}"</p>
-    <div class="grid grid-cols-4 gap-5">
+    <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
         <div v-for="product in productsFromCategory" :key="product.id">
  <ProductCard :product="product"/>
         </div>
@@ -9,7 +10,7 @@
 
 <script setup>
 definePageMeta({
-    layout: 'products'
+    layout: 'default'
 })
 const {category} = useRoute().params
 const urlProductsCategory = 'https://fakestoreapi.com/products/category/' + category

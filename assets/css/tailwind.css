@@ -8,9 +8,10 @@ body {
 }
 @layer components {
     .btn {
-        @apply bg-[#12b488] px-3 py-2 rounded-md text-sm text-white
+        @apply bg-gradient-to-r from-pink-500 to-violet-500 px-3 py-2 rounded-md text-sm text-white
 ;    }
-.router-link-active {
-    color: red;
-}
+.btn:hover {
+    @apply bg-gradient-to-r from-violet-800 to-pink-800 px-3 py-2 rounded-md text-sm text-white
+;    }
+
 }
