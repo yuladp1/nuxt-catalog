@@ -6,8 +6,7 @@
         <img :src="oneProduct.image" alt="" class="mx-auto my-7 w-full">
       </div>
       <div class="p-7">
-        <p> Product details</p>
-        <h2 class="text-4xl my-7"> {{ oneProduct.title }} </h2>
+                <h2 class="text-4xl my-7"> {{ oneProduct.title }} </h2>
         <p class="font-bold text-2xl my-5 ">Product category: <NuxtLink :to="`/categories/${oneProduct.category}`">
             {{ oneProduct.category }}</NuxtLink>
         </p>

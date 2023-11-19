@@ -7,6 +7,9 @@ body {
     color: black;
 }
 @layer components {
+    h2 {
+        @apply text-2xl font-bold text-gray-600 text-center; 
+    }
     .btn {
         @apply bg-gradient-to-r from-pink-500 to-violet-500 px-3 py-2 rounded-md text-sm text-white
 ;    }

@@ -1,11 +1,15 @@
 <template>
-    <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
-        <div v-for="product in products" :key="product">
-            <productCard :product="product" class="hover:shadow-md" />
+    <div class="mx-auto max-w-2xl py-16 sm:py-2 lg:max-w-none lg:py-6">
+        <h2>Products</h2>
+        <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
+
+            <div v-for="product in products" :key="product">
+                <productCard :product="product" class="hover:shadow-md" />
+            </div>
+
         </div>
-        
+        <UPagination v-model="page" :page-count="5" :total="products.length" />
     </div>
-    <UPagination v-model="page" :page-count="5" :total="products.length" />
 </template>
 
 <script setup>
