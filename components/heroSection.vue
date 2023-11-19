@@ -10,11 +10,11 @@
             Heroicon, REST API, NuxtUI, VueUse (clickOutside), Nuxt modules (cookie-control), Algolia. Also I used web3forms.com for contact
             form. </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#"
-              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-              started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
-                aria-hidden="true">→</span></a>
+            <NuxtLink to="/contacts"
+              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Contact form</NuxtLink>
+            <NuxtLink to="/products" class="text-sm font-semibold leading-6 text-gray-900">Products<span
+                aria-hidden="true">→</span></NuxtLink>
           </div>
         </div>
       </div>
